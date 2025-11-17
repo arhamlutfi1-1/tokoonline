@@ -27,7 +27,7 @@ class ProdukResource extends Resource
             ->schema([
                 Forms\Components\TextInput::make('nama_barang')
                     ->required()
-                    ->maxLength(100),
+                    ->maxLength(255),
                 Forms\Components\TextInput::make('kode_barang')
                     ->required()
                     ->maxLength(10),
@@ -36,15 +36,20 @@ class ProdukResource extends Resource
                     ->required(),
                 Forms\Components\TextInput::make('jumlah')
                     ->required()
-                    ->maxLength(255),
+                    ->numeric(),
                 Forms\Components\TextInput::make('price')
                     ->required()
                     ->numeric()
                     ->prefix('Rp'),
-                    Forms\Components\SpatieMediaLibraryFileUpload::make('product_image')
+                 Forms\Components\Select::make('categories')
+                    ->relationship('categories', 'category_name')
+                    ->required()
+                    ->preload(),
+                Forms\Components\SpatieMediaLibraryFileUpload::make('product_image')
                     ->image()
                     ->required()
                     ->collection('product_images'),
+               
             ]);
     }
 
@@ -65,6 +70,9 @@ class ProdukResource extends Resource
                     ->sortable(),
                 Tables\Columns\TextColumn::make('quantity')
                     ->searchable(),
+                Tables\Columns\TextColumn::make('categories.category_name')
+                    ->badge()
+                    ->color('success'),
                 Tables\Columns\TextColumn::make('price')
                     ->money()
                     ->sortable(),
