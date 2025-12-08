@@ -29,11 +29,22 @@
       <span class="ml-3 text-xl">Tokoonline</span>
     </a>
     <nav class="md:ml-auto md:mr-auto flex flex-wrap items-center text-base justify-center">
-      <a class="mr-5 hover:text-gray-900">Home</a>
-      <a class="mr-5 hover:text-gray-900">Daftar Produk</a>
-      <a class="mr-5 hover:text-gray-900">Tentang Toko</a>
-     
+      <a href="{{route ('home')}}" class="mr-5 hover:text-gray-900">Home</a>
+      <a href="" class="mr-5 hover:text-gray-900">Daftar Produk</a>
+      <a href="" class="mr-5 hover:text-gray-900">Tentang Toko</a>
     </nav>
+
+    <a href="{{ route('cart.index') }}" class="relative inline-flex items-center text-gray-900 hover:text-gray-700 mt-4 md:mt-0">
+      <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-6 h-6" viewBox="0 0 24 24">
+        <path d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"></path>
+          </svg>
+                        @php
+                            $cartCount = count(session()->get('cart', []));
+                        @endphp
+                        @if($cartCount > 0)
+                            <span class="absolute -top-2 -right-2 bg-red-500 text-white text-xs font-bold rounded-full h-5 w-5 flex items-center justify-center">{{ $cartCount }}</span>
+                        @endif
+                      </a>
     <a href="/admin" class="inline-flex items-center bg-gray-100 border-0 py-1 px-3 focus:outline-none hover:bg-gray-200 rounded text-base mt-4 md:mt-0">Login
       <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-4 h-4 ml-1" viewBox="0 0 24 24">
         <path d="M5 12h14M12 5l7 7-7 7"></path>
@@ -146,10 +157,10 @@
     <div class="container px-5 py-8 flex flex-wrap mx-auto items-center">
       <div class="flex md:flex-nowrap flex-wrap justify-center items-end md:justify-start">
         <div class="relative sm:w-64 w-40 sm:mr-4 mr-2">
-          <label for="footer-field" class="leading-7 text-sm text-gray-600">Placeholder</label>
+          <label for="footer-field" class="leading-7 text-sm text-gray-600">Masukkan Teks</label>
           <input type="text" id="footer-field" name="footer-field" class="w-full bg-gray-100 bg-opacity-50 rounded border border-gray-300 focus:ring-2 focus:bg-transparent focus:ring-indigo-200 focus:border-indigo-500 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out">
         </div>
-        <button class="inline-flex text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded">Button</button>
+        <button class="inline-flex text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded">Tombol</button>
         <p class="text-gray-500 text-sm md:ml-6 md:mt-0 mt-2 sm:text-left text-center">Bitters chicharrones fanny pack
           <br class="lg:block hidden">waistcoat green juice
         </p>

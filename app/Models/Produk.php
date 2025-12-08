@@ -16,7 +16,9 @@ class Produk extends Model implements \Spatie\MediaLibrary\HasMedia
         'kode_barang',
         'tgl_masuk',
         'quantity',
-        'price'
+        'price',
+        'product_description_short',
+        'product_description_long'
     ];
 
     public function categories()

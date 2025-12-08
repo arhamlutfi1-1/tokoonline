@@ -45,6 +45,12 @@ class ProdukResource extends Resource
                     ->relationship('categories', 'category_name')
                     ->required()
                     ->preload(),
+                 Forms\Components\Textarea::make('product_description_short')
+                    ->required()
+                    ->maxLength(255),
+                 Forms\Components\RichEditor::make('product_description_long')
+                    ->columnSpanFull()
+                    ->required(),
                 Forms\Components\SpatieMediaLibraryFileUpload::make('product_image')
                     ->image()
                     ->required()
