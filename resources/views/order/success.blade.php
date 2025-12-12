@@ -72,7 +72,7 @@
                             <div class="flex items-center justify-between p-3 bg-gray-50 rounded">
                                 <div class="flex items-center gap-3">
                                     <div>
-                                        <h4 class="font-medium text-gray-900">{{ $item->produk_name }}</h4>
+                                        <h4 class="font-medium text-gray-900">{{ $item->nama_barang }}</h4>
                                         <p class="text-sm text-gray-500">Rp. {{ number_format($item->price, 0, ',', '.') }} x {{ $item->quantity }}</p>
                                     </div>
                                 </div>

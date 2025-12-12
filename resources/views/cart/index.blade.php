@@ -25,11 +25,11 @@
                             @foreach($cart as $item)
                                 <div class="p-6 flex flex-col md:flex-row items-center gap-4">
                                     <img src="{{ $item['image'] ?: 'https://dummyimage.com/150x150' }}" 
-                                         alt="{{ $item['produk_name'] }}" 
+                                         alt="{{ $item['nama_barang'] }}" 
                                          class="w-24 h-24 object-cover rounded">
                                     
                                     <div class="flex-1">
-                                        <h3 class="text-lg font-semibold text-gray-900 mb-2">{{ $item['produk_name'] }}</h3>
+                                        <h3 class="text-lg font-semibold text-gray-900 mb-2">{{ $item['nama_barang'] }}</h3>
                                         <p class="text-gray-600 mb-2">Rp. {{ number_format($item['price'], 0, ',', '.') }}</p>
                                         <p class="text-sm text-gray-500">Jumlah: 1</p>
                                     </div>

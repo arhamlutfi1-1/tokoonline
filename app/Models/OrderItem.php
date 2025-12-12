@@ -9,7 +9,7 @@ class OrderItem extends Model
     protected $fillable = [
         'order_id',
         'produk_id',
-        'produk_name',
+        'nama_barang',
         'price',
         'quantity',
         'subtotal',
@@ -25,8 +25,9 @@ class OrderItem extends Model
         return $this->belongsTo(Order::class);
     }
 
-    public function product()
+    // ganti nama relasi + modelnya
+    public function produk()
     {
-        return $this->belongsTo(Product::class);
+        return $this->belongsTo(Produk::class, 'produk_id');
     }
 }

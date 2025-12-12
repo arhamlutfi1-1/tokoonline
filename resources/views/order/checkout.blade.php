@@ -103,10 +103,10 @@
                         @foreach($cart as $item)
                             <div class="flex items-center gap-3 pb-3 border-b border-gray-200">
                                 <img src="{{ $item['image'] ?: 'https://dummyimage.com/150x150' }}" 
-                                     alt="{{ $item['produk_name'] }}" 
+                                     alt="{{ $item['nama_barang'] }}" 
                                      class="w-16 h-16 object-cover rounded">
                                 <div class="flex-1">
-                                    <h3 class="text-sm font-semibold text-gray-900">{{ $item['produk_name'] }}</h3>
+                                    <h3 class="text-sm font-semibold text-gray-900">{{ $item['nama_barang'] }}</h3>
                                     <p class="text-xs text-gray-500">Rp. {{ number_format($item['price'], 0, ',', '.') }}</p>
                                 </div>
                             </div>

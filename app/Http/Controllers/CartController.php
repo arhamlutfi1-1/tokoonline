@@ -50,12 +50,11 @@ class CartController extends Controller
         // Add new product to cart with quantity = 1
         $cart[] = [
             'produk_id' => $product->id,
-            'produk_name' => $product->produk_name,
+            'nama_barang' => $product->nama_barang,
             'price' => $product->price,
             'quantity' => 1,
             'image' => $product->getFirstMediaUrl('product_images'),
         ];
-
         session()->put('cart', $cart);
         return redirect()->route('cart.index')->with('success', 'Produk berhasil ditambahkan ke keranjang!');
     }
