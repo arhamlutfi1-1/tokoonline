@@ -55,7 +55,6 @@ class ProdukResource extends Resource
                     ->image()
                     ->required()
                     ->collection('product_images'),
-               
             ]);
     }
 
