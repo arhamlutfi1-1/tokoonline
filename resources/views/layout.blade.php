@@ -22,12 +22,18 @@
     <body >
         <header class="text-gray-600 body-font">
   <div class="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
-    <a class="flex title-font font-medium items-center text-gray-900 mb-4 md:mb-0">
-      <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-10 h-10 text-white p-2 bg-indigo-500 rounded-full" viewBox="0 0 24 24">
-        <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"></path>
-      </svg>
-      <span class="ml-3 text-xl">Tokoonline</span>
-    </a>
+ <a href="{{ route('home') }}" class="flex items-center gap-2">
+    <img
+  src="{{ asset('images/logo-tokoonline.png') }}"
+  class="h-20 w-25 object-contain"
+
+>
+<span class="text-2xl font-bold tracking-tight bg-gradient-to-r from-indigo-500 to-purple-600 bg-clip-text text-transparent">
+    Tokoonline
+</span>
+
+</a>
+
     <nav class="md:ml-auto md:mr-auto flex flex-wrap items-center text-base justify-center">
       <a href="{{route ('home')}}" class="mr-5 hover:text-gray-900">Home</a>
       <a href="" class="mr-5 hover:text-gray-900">Daftar Produk</a>
@@ -53,150 +59,92 @@
   </div>
 </header>
 @yield('content')
-<footer class="text-gray-600 body-font">
-  <div class="container px-5 py-24 mx-auto">
-    <div class="flex flex-wrap md:text-left text-center -mb-10 -mx-4">
-      <div class="lg:w-1/6 md:w-1/2 w-full px-4">
-        <h2 class="title-font font-medium text-gray-900 tracking-widest text-sm mb-3">CATEGORIES</h2>
-        <nav class="list-none mb-10">
-          <li>
-            <a class="text-gray-600 hover:text-gray-800">Home</a>
-          </li>
-          <li>
-            <a class="text-gray-600 hover:text-gray-800">Daftar Produk</a>
-          </li>
-          <li>
-            <a class="text-gray-600 hover:text-gray-800">Tentang Toko</a>
-          </li>
+<footer class="bg-white border-t border-gray-200">
+  <div class="container mx-auto px-5 py-12">
+    <div class="grid grid-cols-1 gap-10 md:grid-cols-4">
 
-       
-        </nav>
-      </div>
-      <div class="lg:w-1/6 md:w-1/2 w-full px-4">
-        <h2 class="title-font font-medium text-gray-900 tracking-widest text-sm mb-3">CATEGORIES</h2>
-        <nav class="list-none mb-10">
-          <li>
-            <a class="text-gray-600 hover:text-gray-800">Home</a>
-          </li>
-          <li>
-            <a class="text-gray-600 hover:text-gray-800">Daftar Produk</a>
-          </li>
-          <li>
-            <a class="text-gray-600 hover:text-gray-800">Tentang Toko</a>
-          </li>
-   
-        </nav>
-      </div>
-      <div class="lg:w-1/6 md:w-1/2 w-full px-4">
-        <h2 class="title-font font-medium text-gray-900 tracking-widest text-sm mb-3">CATEGORIES</h2>
-        <nav class="list-none mb-10">
-          <li>
-            <a class="text-gray-600 hover:text-gray-800">Home</a>
-          </li>
-          <li>
-            <a class="text-gray-600 hover:text-gray-800">Daftar Produk</a>
-          </li>
-          <li>
-            <a class="text-gray-600 hover:text-gray-800">Tentang Toko</a>
-          </li>
-     
-        </nav>
-      </div>
-      <div class="lg:w-1/6 md:w-1/2 w-full px-4">
-        <h2 class="title-font font-medium text-gray-900 tracking-widest text-sm mb-3">CATEGORIES</h2>
-        <nav class="list-none mb-10">
-          <li>
-            <a class="text-gray-600 hover:text-gray-800">Home</a>
-          </li>
-          <li>
-            <a class="text-gray-600 hover:text-gray-800">Daftar Produk</a>
-          </li>
-          <li>
-            <a class="text-gray-600 hover:text-gray-800">Tentang Toko</a>
-          </li>
-          
-        </nav>
-      </div>
-      <div class="lg:w-1/6 md:w-1/2 w-full px-4">
-        <h2 class="title-font font-medium text-gray-900 tracking-widest text-sm mb-3">CATEGORIES</h2>
-        <nav class="list-none mb-10">
-          <li>
-            <a class="text-gray-600 hover:text-gray-800">First Link</a>
-          </li>
-          <li>
-            <a class="text-gray-600 hover:text-gray-800">Second Link</a>
-          </li>
-          <li>
-            <a class="text-gray-600 hover:text-gray-800">Third Link</a>
-          </li>
-          <li>
-            <a class="text-gray-600 hover:text-gray-800">Fourth Link</a>
-          </li>
-        </nav>
-      </div>
-      <div class="lg:w-1/6 md:w-1/2 w-full px-4">
-        <h2 class="title-font font-medium text-gray-900 tracking-widest text-sm mb-3">CATEGORIES</h2>
-        <nav class="list-none mb-10">
-          <li>
-            <a class="text-gray-600 hover:text-gray-800">First Link</a>
-          </li>
-          <li>
-            <a class="text-gray-600 hover:text-gray-800">Second Link</a>
-          </li>
-          <li>
-            <a class="text-gray-600 hover:text-gray-800">Third Link</a>
-          </li>
-          <li>
-            <a class="text-gray-600 hover:text-gray-800">Fourth Link</a>
-          </li>
-        </nav>
-      </div>
-    </div>
-  </div>
-  <div class="border-t border-gray-200">
-    <div class="container px-5 py-8 flex flex-wrap mx-auto items-center">
-      <div class="flex md:flex-nowrap flex-wrap justify-center items-end md:justify-start">
-        <div class="relative sm:w-64 w-40 sm:mr-4 mr-2">
-          <label for="footer-field" class="leading-7 text-sm text-gray-600">Masukkan Teks</label>
-          <input type="text" id="footer-field" name="footer-field" class="w-full bg-gray-100 bg-opacity-50 rounded border border-gray-300 focus:ring-2 focus:bg-transparent focus:ring-indigo-200 focus:border-indigo-500 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out">
-        </div>
-        <button class="inline-flex text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded">Tombol</button>
-        <p class="text-gray-500 text-sm md:ml-6 md:mt-0 mt-2 sm:text-left text-center">Bitters chicharrones fanny pack
-          <br class="lg:block hidden">waistcoat green juice
+      {{-- Brand --}}
+      <div class="md:col-span-1">
+        <a href="{{ route('home') }}" class="flex items-center gap-2">
+          <img src="{{ asset('images/logo-tokoonline.png') }}" class="h-10 w-10 object-contain" alt="Tokoonline">
+          <span class="text-xl font-bold tracking-tight text-gray-900">Tokoonline</span>
+        </a>
+        <p class="mt-3 text-sm text-gray-600 leading-relaxed">
+          Belanja mudah, cepat, dan aman. Produk pilihan dengan kualitas terbaik.
         </p>
+
+        <div class="mt-4 flex items-center gap-3">
+          <a href="#" class="text-gray-500 hover:text-gray-900">
+            <svg fill="currentColor" class="w-5 h-5" viewBox="0 0 24 24">
+              <path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"></path>
+            </svg>
+          </a>
+          <a href="#" class="text-gray-500 hover:text-gray-900">
+            <svg fill="currentColor" class="w-5 h-5" viewBox="0 0 24 24">
+              <path d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z"></path>
+            </svg>
+          </a>
+          <a href="#" class="text-gray-500 hover:text-gray-900">
+            <svg fill="none" stroke="currentColor" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
+              <rect width="20" height="20" x="2" y="2" rx="5" ry="5"></rect>
+              <path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37zm1.5-4.87h.01"></path>
+            </svg>
+          </a>
+        </div>
       </div>
-      <span class="inline-flex lg:ml-auto lg:mt-0 mt-6 w-full justify-center md:justify-start md:w-auto">
-        <a class="text-gray-500">
-          <svg fill="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
-            <path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"></path>
-          </svg>
-        </a>
-        <a class="ml-3 text-gray-500">
-          <svg fill="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
-            <path d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z"></path>
-          </svg>
-        </a>
-        <a class="ml-3 text-gray-500">
-          <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
-            <rect width="20" height="20" x="2" y="2" rx="5" ry="5"></rect>
-            <path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37zm1.5-4.87h.01"></path>
-          </svg>
-        </a>
-        <a class="ml-3 text-gray-500">
-          <svg fill="currentColor" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="0" class="w-5 h-5" viewBox="0 0 24 24">
-            <path stroke="none" d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z"></path>
-            <circle cx="4" cy="4" r="2" stroke="none"></circle>
-          </svg>
-        </a>
-      </span>
+
+      {{-- Menu --}}
+      <div>
+        <h3 class="text-sm font-semibold text-gray-900 tracking-widest uppercase">Menu</h3>
+        <ul class="mt-4 space-y-2 text-sm">
+          <li><a href="{{ route('home') }}" class="text-gray-600 hover:text-gray-900">Home</a></li>
+          <li><a href="#" class="text-gray-600 hover:text-gray-900">Daftar Produk</a></li>
+          <li><a href="#" class="text-gray-600 hover:text-gray-900">Tentang Toko</a></li>
+        </ul>
+      </div>
+
+      {{-- Bantuan --}}
+      <div>
+        <h3 class="text-sm font-semibold text-gray-900 tracking-widest uppercase">Bantuan</h3>
+        <ul class="mt-4 space-y-2 text-sm">
+          <li><a href="#" class="text-gray-600 hover:text-gray-900">Cara Belanja</a></li>
+          <li><a href="#" class="text-gray-600 hover:text-gray-900">Pengiriman</a></li>
+          <li><a href="#" class="text-gray-600 hover:text-gray-900">FAQ</a></li>
+        </ul>
+      </div>
+
+      {{-- Newsletter --}}
+      <div>
+        <h3 class="text-sm font-semibold text-gray-900 tracking-widest uppercase">Update</h3>
+        <p class="mt-4 text-sm text-gray-600">
+          Dapatkan info promo & produk terbaru.
+        </p>
+        <form class="mt-4 flex gap-2">
+          <input
+            type="email"
+            placeholder="Email kamu"
+            class="w-full rounded-lg border border-gray-300 px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-indigo-200 focus:border-indigo-500"
+          >
+          <button
+            type="submit"
+            class="rounded-lg bg-indigo-600 px-4 py-2 text-sm font-semibold text-white hover:bg-indigo-700"
+          >
+            Subscribe
+          </button>
+        </form>
+      </div>
+
     </div>
-  </div>
-  <div class="bg-gray-100">
-    <div class="container mx-auto py-4 px-5 flex flex-wrap flex-col sm:flex-row">
-      <p class="text-gray-500 text-sm text-center sm:text-left">© 2020 Tailblocks —
-        <a href="https://twitter.com/knyttneve" class="text-gray-600 ml-1" target="_blank" rel="noopener noreferrer">@knyttneve</a>
+
+    {{-- Bottom --}}
+    <div class="mt-10 border-t border-gray-200 pt-6 flex flex-col gap-2 sm:flex-row sm:items-center sm:justify-between">
+      <p class="text-sm text-gray-500">
+        © {{ date('Y') }} Tokoonline. All rights reserved.
       </p>
-      <span class="sm:ml-auto sm:mt-0 mt-2 sm:w-auto w-full sm:text-left text-center text-gray-500 text-sm">Enamel pin tousled raclette tacos irony</span>
+      <div class="flex gap-4 text-sm">
+        <a href="#" class="text-gray-500 hover:text-gray-900">Privacy</a>
+        <a href="#" class="text-gray-500 hover:text-gray-900">Terms</a>
+      </div>
     </div>
   </div>
 </footer>
