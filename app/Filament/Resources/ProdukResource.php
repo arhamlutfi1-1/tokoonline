@@ -34,7 +34,7 @@ class ProdukResource extends Resource
                 Forms\Components\DatePicker::make('tgl_masuk')
                     ->label('Product date')
                     ->required(),
-                Forms\Components\TextInput::make('jumlah')
+                Forms\Components\TextInput::make('quantity')
                     ->required()
                     ->numeric(),
                 Forms\Components\TextInput::make('price')
@@ -44,6 +44,9 @@ class ProdukResource extends Resource
                  Forms\Components\Select::make('categories')
                     ->relationship('categories', 'category_name')
                     ->required()
+                    ->preload(),
+                    Forms\Components\Select::make('tags')
+                    ->relationship('tags', 'name')
                     ->preload(),
                  Forms\Components\Textarea::make('product_description_short')
                     ->required()
@@ -78,6 +81,9 @@ class ProdukResource extends Resource
                 Tables\Columns\TextColumn::make('categories.category_name')
                     ->badge()
                     ->color('success'),
+                tables\Columns\TextColumn::make('tags.name')
+                    ->label('Tags')
+                    ->wrap(),
                 Tables\Columns\TextColumn::make('price')
                     ->money()
                     ->sortable(),

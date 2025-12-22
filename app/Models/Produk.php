@@ -25,4 +25,8 @@ class Produk extends Model implements \Spatie\MediaLibrary\HasMedia
     {
         return $this->belongsToMany(Category::class, 'product_categories', 'produk_id', 'category_id');
     }
+    public function tags()
+    {
+        return $this->belongsToMany(Tags::class, 'produk_tags', 'produk_id', 'tag_id');
+    }
 }
